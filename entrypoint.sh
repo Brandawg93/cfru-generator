@@ -7,7 +7,15 @@ then
 fi
 
 sudo apt update
-sudo apt install -y build-essential
+sudo apt install -y build-essential libarchive-zip-perl
+
+crc="$(crc32 /Rom/BPRE0.gba)"
+
+if [[ $crc != $VALID_CRC ]]
+then
+    echo "Invalid CRC32: $crc"
+    exit 1
+fi
 
 git clone https://github.com/ipatix/wav2agb
 cd wav2agb
