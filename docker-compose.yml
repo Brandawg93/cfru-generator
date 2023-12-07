@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  cfru:
+    build: .
+    volumes:
+      - ./Rom:/Rom
+    container_name: cfru
+    environment:
+      - CFRU_OFFSET=0x900000

@@ -1,0 +1,1 @@
+Add your FireRed Rom here and rename it to BPRE0.gba.
